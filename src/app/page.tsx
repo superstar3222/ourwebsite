@@ -16,13 +16,13 @@ export default function Home() {
   const renderContent = () => {
     switch (currentPage) {
       case 'home':
-        return <HomeContent setCurrentPage={setCurrentPage} />;
+        return <HomeContent />;
       case 'about':
-        return <AboutContent setCurrentPage={setCurrentPage} />;
+        return <AboutContent />;
       case 'service':
-        return <ServiceContent setCurrentPage={setCurrentPage} />;
+        return <ServiceContent />;
       default:
-        return <HomeContent setCurrentPage={setCurrentPage} />;
+        return <HomeContent />;
     }
   };
 

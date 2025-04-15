@@ -6,11 +6,7 @@ import Image from 'next/image';
 import CTO from '../../components/common/CTO';
 import Blogs from '../../components/common/Blogs';
 
-interface ServiceContentProps {
-    setCurrentPage: (page: string) => void;
-}
-
-export default function ServiceContent({ setCurrentPage }: ServiceContentProps) {
+export default function ServiceContent() {
     const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
     // Navigation functions

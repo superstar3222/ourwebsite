@@ -5,37 +5,33 @@ import Teams from '../../components/common/Teams';
 import CTO from '../../components/common/CTO';
 import Blogs from '../../components/common/Blogs';
 
-interface AboutContentProps {
-    setCurrentPage: (page: string) => void;
-}
-
-export default function AboutContent({ setCurrentPage }: AboutContentProps) {
+export default function AboutContent() {
     // Company values data
     const companyValues = [
         {
             id: 1,
             icon: "integrity",
             title: "Integrity",
-            description: "Consistently good ethical standards"
+            description: "Consistently good ethical standards",
         },
         {
             id: 2,
             icon: "trust",
             title: "Trust",
-            description: "Customer peace of mind guarantee"
+            description: "Customer peace of mind guarantee",
         },
         {
             id: 3,
             icon: "clarity",
             title: "Client Centricity",
-            description: "Customized plans to every need"
+            description: "Customized plans to every need",
         },
         {
             id: 4,
             icon: "excellence",
             title: "Excellence",
-            description: "Excellence in every single detail"
-        }
+            description: "Excellence in every single detail",
+        },
     ];
 
     // Brand partners data
@@ -45,7 +41,7 @@ export default function AboutContent({ setCurrentPage }: AboutContentProps) {
         { id: 3, name: "Zoom", logo: "/partner-3.png" },
         { id: 4, name: "Salesforce", logo: "/partner-4.png" },
         { id: 5, name: "CapGemini", logo: "/partner-5.png" },
-        { id: 6, name: "Intuit", logo: "/partner-6.png" }
+        { id: 6, name: "Intuit", logo: "/partner-6.png" },
     ];
 
     return (
@@ -75,7 +71,7 @@ export default function AboutContent({ setCurrentPage }: AboutContentProps) {
                         </div>
 
                         <div className="md:w-1/3 flex flex-row-reverse">
-                            <div className='flex-col'>
+                            <div className="flex-col">
                                 <Image
                                     src="/images/about-2.png"
                                     alt="Financial professionals meeting"
@@ -120,7 +116,7 @@ export default function AboutContent({ setCurrentPage }: AboutContentProps) {
             <section className="py-16">
                 <div className="container mx-auto px-4 max-w-[75rem]">
                     <div className="flex flex-col md:flex-row items-center">
-                        <div className="md:w-1/2  mb-8 md:mb-0 mr-20 ml-20">
+                        <div className="md:w-1/2 mb-8 md:mb-0 mr-20 ml-20">
                             <Image
                                 src="/images/journey.jpg"
                                 alt="Financial professionals"
