@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 import Header from '@/components/Header';
-import AboutContent from '@/app/about/page';
+import TeamContent from '@/app/team/page';
 import HomeContent from '@/app/home/page';
 import ServiceContent from '@/app/service/page';
 import Footer from '@/components/Footer';
@@ -17,8 +17,8 @@ export default function Home() {
     switch (currentPage) {
       case 'home':
         return <HomeContent />;
-      case 'about':
-        return <AboutContent />;
+      case 'team':
+        return <TeamContent />;
       case 'service':
         return <ServiceContent />;
       default:

@@ -1,68 +1,12 @@
 "use client";
 
-import React, { useState } from 'react';
-import { testimonials } from '@/utils/utils';
+import React from 'react';
 import Image from 'next/image';
-import CTO from '../../components/common/CTO';
-import Blogs from '../../components/common/Blogs';
+import Advice from '../../components/common/Advice';
+import TestimonialsCarousel from '@/components/common/TestimonialsCarousel';
+import { serviceCards } from '@/utils/utils';
 
 export default function ServiceContent() {
-    const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
-    // Navigation functions
-    const nextTestimonial = () => {
-        setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    };
-
-    const prevTestimonial = () => {
-        setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-    };
-
-    // Service cards data
-    const serviceCards = [
-        {
-            id: 1,
-            icon: "chart",
-            title: "Bookkeeping and Reporting",
-            image: "/images/recruiter.png",
-            description: "At eget sapien ultricies risus sed laoreet ultrices rhoncus turpis. Et donec ut arcu nulla suspendisse egestas tellus."
-        },
-        {
-            id: 2,
-            icon: "money",
-            title: "Cash Flow Management",
-            image: "/images/Liam.png",
-            description: "BitTorrent THETA solana sectionn celo avalanche. Decred BitTorrent polygon flow fantom. Vechain maker dai TRON."
-        },
-        {
-            id: 3,
-            icon: "tax",
-            title: "Personalized Tax Solutions",
-            image: "/images/service3.png",
-            description: "Filecoin celo TRON chainlink cosmos Harmony polygon nem icp algorand EOS monero. THE-TA stellar."
-        },
-        {
-            id: 4,
-            icon: "assistance",
-            title: "Tax Filing Assistance",
-            image: "/images/Olivia.png",
-            description: "USD ox solana BitTorrent stellar UTXO compound binance secret. Serum near celo TRON quant vechain Pancakeswap."
-        },
-        {
-            id: 5,
-            icon: "payroll",
-            title: "Custom Payroll Solutions",
-            image: "/images/Miranda.png",
-            description: "BitTorrent hedra kaleno greezer dogma polygon smart flow halo hedara golem Pancakeswap Paracelswap amp."
-        },
-        {
-            id: 6,
-            icon: "statement",
-            title: "Financial Statement",
-            image: "/images/Elijah.png",
-            description: "At eget sapien ultricies risus sed laoreet ultrices rhoncus turpis. Et donec ut arcu nulla suspendisse egestas tellus."
-        }
-    ];
 
     return (
         <div className="pt-16">
@@ -138,55 +82,12 @@ export default function ServiceContent() {
                 </div>
             </section>
 
-            {/* Testimonials Section */}
-            <section className="py-12">
-                <div className="bg-[#f8f7f3] container mx-auto p-8 max-w-[75rem]">
-                    <div className="mx-auto p-8 relative">
-                        <div className="flex">
-                            <div className="mr-6">
-                                <Image
-                                    src={testimonials[currentTestimonial].image}
-                                    alt={testimonials[currentTestimonial].name}
-                                    width={150}
-                                    height={200}
-                                    style={{ objectFit: 'cover', borderRadius: '0.375rem' }}
-                                />
-                            </div>
-
-                            <div className="flex-1 pl-8 pr-16">
-                                <h3 className="text-2xl font-bold">{testimonials[currentTestimonial].name}</h3>
-                                <p className="text-gray-600 mb-4">{testimonials[currentTestimonial].position}</p>
-
-                                <p className="text-xl">
-                                    {testimonials[currentTestimonial].text}
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="absolute top-0 right-8 flex gap-2">
-                            <button onClick={prevTestimonial} className="w-10 h-10 rounded-xl bg-white text-black hover:bg-teal-800 hover:text-white transition-colors duration-200 flex items-center justify-center">
-                                <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z" fill="currentColor" />
-                                </svg>
-                            </button>
-                            <button onClick={nextTestimonial} className="w-10 h-10 rounded-xl bg-white text-black hover:bg-teal-800 hover:text-white transition-colors duration-200 flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                                    <path d="M11.293 4.707 17.586 11H4v2h13.586l-6.293 6.293 1.414 1.414L21.414 12l-8.707-8.707-1.414 1.414z" fill="currentColor" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            {/* Testimonials Section - Replaced with the new carousel component */}
+            <TestimonialsCarousel />
 
             {/* Blog Section */}
             <section className="py-16">
-                <Blogs />
-            </section>
-
-            {/* CTO Section */}
-            <section className="py-8">
-                <CTO />
+                <Advice />
             </section>
         </div>
     );

@@ -12,13 +12,13 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
                 <div className="flex items-center">
                     <button
                         onClick={() => setCurrentPage('home')}
-                        className="text-xl font-bold text-teal-600"
+                        className="text-3xl font-bold text-teal-600"
                     >
                         LuckStack
                     </button>
                 </div>
 
-                <nav className="hidden md:flex space-x-8">
+                <nav className="hidden md:flex space-x-8 text-xl">
                     <button
                         onClick={() => setCurrentPage('home')}
                         className={`${currentPage === 'home' ? 'text-teal-600 font-medium' : 'text-gray-700'} hover:text-teal-600 cursor-pointer`}
@@ -26,22 +26,28 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
                         Home
                     </button>
                     <button
-                        onClick={() => setCurrentPage('about')}
-                        className={`${currentPage === 'about' ? 'text-teal-600 font-medium' : 'text-gray-700'} hover:text-teal-600 cursor-pointer`}
+                        onClick={() => setCurrentPage('team')}
+                        className={`${currentPage === 'team' ? 'text-teal-600 font-medium' : 'text-gray-700'} hover:text-teal-600 cursor-pointer`}
                     >
-                        About
+                        Team
                     </button>
                     <button
                         onClick={() => setCurrentPage('service')}
                         className={`${currentPage === 'service' ? 'text-teal-600 font-medium' : 'text-gray-700'} hover:text-teal-600 cursor-pointer`}
                     >
-                        Service
+                        Services
                     </button>
                     <button
-                        onClick={() => setCurrentPage('projects')}
-                        className={`${currentPage === 'projects' ? 'text-teal-600 font-medium' : 'text-gray-700'} hover:text-teal-600 cursor-pointer`}
+                        onClick={() => setCurrentPage('faq')}
+                        className={`${currentPage === 'faq' ? 'text-teal-600 font-medium' : 'text-gray-700'} hover:text-teal-600 cursor-pointer`}
                     >
-                        Pricing
+                        FAQ
+                    </button>
+                    <button
+                        onClick={() => setCurrentPage('contact')}
+                        className={`${currentPage === 'contact' ? 'text-teal-600 font-medium' : 'text-gray-700'} hover:text-teal-600 cursor-pointer`}
+                    >
+                        Contact
                     </button>
                 </nav>
 
